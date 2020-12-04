@@ -25,6 +25,8 @@ jobs:
           secret_texts: ${{ secrets.MANY_VARS }}
         run: |
           echo "$secret_texts" > .env
+      - name: Install
+        run: npm ci
       - name: Run index
         run: |
           node index.js
